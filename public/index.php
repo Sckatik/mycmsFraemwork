@@ -12,9 +12,6 @@ Router::add('',['controller'=>'Main', 'action'=>'index']);
 
 debug(Router::getRoutes());
 
-if (Router::matchRoute($query)) {
-    debug(Router::getRoute());
-}
-else {
+if (!Router::matchRoute($query)) {
     echo '404';
 }
